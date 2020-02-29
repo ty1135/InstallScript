@@ -52,6 +52,7 @@ WKHTMLTOX_X32=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.
 # Update Server
 #--------------------------------------------------
 echo -e "\n---- Update Server ----"
+apt-get install software-properties-common
 # universe package is for Ubuntu 18.x
 sudo add-apt-repository universe
 # libpng12-0 dependency for wkhtmltopdf
@@ -113,6 +114,8 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install ODOO
 #--------------------------------------------------
 echo -e "\n==== Installing ODOO Server ===="
+mkdir /var/lib/odoo
+chmod -R 777 /var/lib/odoo
 dpkg -i odoo13.deb
 #--------------------------------------------------
 # Install Nginx if needed
