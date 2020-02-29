@@ -1,0 +1,10 @@
+apt-get install software-properties-common	
+mkdir /var/lib/odoo
+chmod -R 777 /var/lib/odoo
+
+源码：/usr/lib/python3/dist-packages/odoo/
+配置文件：/etc/odoo/odoo.conf
+服务文件(service)：/etc/init.d/odoo
+启动文件(odoo-bin)：/usr/bin/odoo
+日志文件：/var/log/odoo/odoo-server.log
+附件：/var/lib/odoo/
